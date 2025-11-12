@@ -17,6 +17,7 @@ public class Main {
         Thread t2 = new Thread(r);
         t2.setPriority(Thread.MAX_PRIORITY);
         t2.start();
+        t2.interrupt();
 
         // Version reducida (clases anonimas)
         //new Thread(new miRunnable()).start();
