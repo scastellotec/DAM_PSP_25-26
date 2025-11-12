@@ -1,3 +1,6 @@
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -8,6 +11,8 @@ public class Main {
         new Thread(new ProducerTabletops(wh)).start();
         new Thread(new ProducerLegs(wh)).start();
         new Thread(new ConsumerTable(wh)).start();
+
+        BlockingQueue<WareHouse> prueba = new LinkedBlockingQueue<>();
 
     }
 }

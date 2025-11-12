@@ -9,7 +9,11 @@ public class ConsumerTable implements Runnable{
     @Override
     public void run() {
         while(true){
-            wh.buildTable();
+            try {
+                wh.buildTable();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }
